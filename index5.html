@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Вход для педагогов</title>
+	<style type="text/css">h1{
+		text-align: center;
+	}
+	#contact input {
+	border: 1px solid green;
+	outline: none;
+	padding: 8px;
+	display: block;
+	width: 100%;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+#contact button {
+	border: none;
+	outline: none;
+	color: white;
+	background-color: green;
+	border-radius:10px;
+	padding: 12px 24px;
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-family: inherit;
+	font-size: 16px;
+    margin-bottom: 10px;
+        
+}
+#contact{color: #000;
+	}
+</style>
+</head>
+<body>
+<h1>Вход</h1>
+<div id="contact">
+          <form>
+                <p>
+                        <label for="name">Имя</label>
+                        <input type="text" name="Name" id="name">
+                  </p>
+                  <p>
+                        <label for="email">Email</label>
+                        <input id="email">
+                  </p>
+                <p>
+                        <label for="comment">Пароль</label>
+                        <input type="password" id="comment">
+                  </p>
+                  <button>Войти</button>
+          </form>
+</div>
+
+
+<script type="text/javascript">
+	let name="feromok"
+	document.querySelector("button").onclick=function(){
+	let answer=prompt("Ваше имя в базе данных")
+	let correctAnswer=name
+	if(check(answer,correctAnswer)==true){
+		document.querySelector("#plus").disabled=true
+	}
+}
+function check(answer,correctAnswer){
+	if (answer==correctAnswer){
+		alert("indexFeromokLichnayCabinet.html")
+		
+		return true
+	}
+	else{
+		alert("Нет имени в базе данных")
+		return false
+	}
+}
+</script>
+</body>
+</html>
